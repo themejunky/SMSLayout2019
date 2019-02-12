@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools" style="@style/Verical.WrapWrap.White"
+        android:id="@+id/parrent"
+
+>
+
+    <ImageView android:layout_width="match_parent"
+               android:layout_height="150dp"
+               android:scaleType="centerCrop"
+               android:contentDescription="@string/apply_text_4"
+               android:src="@drawable/sms_banner"/>
+
+    <TextView
+            style="@style/MatchWrap.Black.14"
+            android:padding="7dp"
+            android:gravity="center"
+            android:text="@string/apply_text_6"/>
+
+    <RelativeLayout
+            style="@style/MatchWrap"
+            android:padding="10dp">
+
+
+        <LinearLayout
+                android:id="@+id/nView2"
+                android:layout_width="170dp"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/button_green">
+
+            <ImageView
+                    style="@style/btnGoogleImage" tools:ignore="ContentDescription"/>
+
+            <TextView
+                    style="@style/btnText"
+                    android:textColor="@drawable/green_state"
+                    android:text="@string/apply_text_3"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

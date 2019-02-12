@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_install"
+                android:id="@+id/containerDialog">
+
+    <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/installButton"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/montserrat"
+            android:text="@string/install_header_text"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+
+    <TextView
+            android:id="@+id/textApply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/installButton"
+            android:layout_centerInParent="true"
+            android:textAllCaps="false"
+            android:fontFamily="@font/montserrat"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:gravity="center"
+            android:layout_marginBottom="40dp"
+            android:text="Click to install SMS Plus and apply Gold Glitter Theme"
+            android:textColor="@color/white" />
+
+    <LinearLayout
+            android:id="@+id/installButton"
+            style="@style/Buttons"
+            android:background="@drawable/install_button"
+            android:layout_alignParentBottom="true"
+            android:textAllCaps="false"
+            android:layout_marginBottom="30dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15sp">
+
+        <ImageView
+                android:layout_marginTop="10dp"
+                style="@style/Image_GB_Logo" />
+
+        <TextView
+                android:layout_weight="1.9"
+                android:textSize="15sp"
+                style="@style/TextView_GB_Logo"
+                android:layout_gravity="center"
+                android:text="@string/install" android:fontFamily="@font/montserrat"/>
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

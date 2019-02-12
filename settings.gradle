@@ -1,0 +1,1 @@
+include ':app', ':kplayout2019', ':gdx', ':gdx-backend-android', ':gdx-test', ':api', ':rippereffects-v.1.0.3'
