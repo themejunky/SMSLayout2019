@@ -11,7 +11,7 @@ import android.view.View
 import com.kplayout2019.R
 import com.example.layout2019.screen.moreapps.utils.MoreAppsAdapter
 import com.example.layout2019.screen.moreapps.utils.setWaMoreAppsAdapter
-import com.theme.junky.themeskotlin.MainApplication
+import com.theme.junky.themeskotlin.MyMainApplication
 import com.theme.junky.themeskotlin.utils.ViewModelFactory
 import kotlinx.android.synthetic.main.moreapps_activity.*
 import kotlinx.android.synthetic.main.no_internet.*
@@ -49,6 +49,6 @@ class MoreApps  : AppCompatActivity() {
     }
 
     fun redirectToGP(urlString: String,position:Int){
-        (application as MainApplication).MGAE.getEvents("taseeesa","MoreApps: Click on position: ${position} ${urlString}","Click on Button")
+        (application as MyMainApplication).MGAE.getEvents("taseeesa","MoreApps: Click on position: ${position} ${urlString}","Click on Button")
         startActivity(Intent(Intent.ACTION_VIEW,Uri.parse(urlString)))}
 }

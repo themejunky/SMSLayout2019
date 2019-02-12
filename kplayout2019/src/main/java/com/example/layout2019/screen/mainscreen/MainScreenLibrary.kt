@@ -13,7 +13,7 @@ import com.example.layout2019.screen.moreapps.MoreApps
 import com.example.layout2019.screen.wallpapers.Wallpapers
 import com.example.layout2019.utils.ApplyingTheme
 import com.example.layout2019.utils.Tools
-import com.theme.junky.themeskotlin.MainApplication
+import com.theme.junky.themeskotlin.MyMainApplication
 import com.theme.junky.themeskotlin.utils.ViewModelFactory
 import effects.ripper.water.themejunky.com.rippereffects.ManagerWaterEffects
 
@@ -44,35 +44,35 @@ class MainScreenLibrary : AppCompatActivity() {
     }
 
     fun applyTheme(){
-        (application as MainApplication).MGAE.getEvents(getString(R.string.layout_event),"Click on Apply","Click on Button")
+        (application as MyMainApplication).MGAE.getEvents(getString(R.string.layout_event),"Click on Apply","Click on Button")
         ApplyingTheme().loadingFirstAdManager(this,mViewModel.interstitialAdmob,mViewModel.interstitialAppnext,"logInter")}
 
     fun redirectToWhatsAppGP(){
-        (application as MainApplication).MGAE.getEvents(getString(R.string.layout_event),"Click on WhatsAppStickers Button","Click on Button")
+        (application as MyMainApplication).MGAE.getEvents(getString(R.string.layout_event),"Click on WhatsAppStickers Button","Click on Button")
         startActivity(Intent(Intent.ACTION_VIEW,Uri.parse("https://play.google.com/store/apps/details?id=com.smsplus.sticker.pack.app")))}
 
     fun redirectToWallpapers(){
-        (application as MainApplication).MGAE.getEvents(getString(R.string.layout_event),"Click on Wallpaper","Click on Button")
+        (application as MyMainApplication).MGAE.getEvents(getString(R.string.layout_event),"Click on Wallpaper","Click on Button")
         startActivity(Intent(this, Wallpapers::class.java))}
 
     fun redirectToOurBestThemeGP(){
-        (application as MainApplication).MGAE.getEvents(getString(R.string.layout_event),"Click on OurBest","Click on Button")
+        (application as MyMainApplication).MGAE.getEvents(getString(R.string.layout_event),"Click on OurBest","Click on Button")
         if(mViewModel.ourBestTheme.isEmpty()){ startActivity(Intent(Intent.ACTION_VIEW,Uri.parse("https://play.google.com/store/apps/details?id=com.themejunky.launchers")))}
         else{startActivity(Intent(Intent.ACTION_VIEW,Uri.parse(mViewModel.ourBestTheme)))}}
 
     fun redirectToMoreApps(){
-        (application as MainApplication).MGAE.getEvents(getString(R.string.layout_event),"Click on MoreApps","Click on Button")
+        (application as MyMainApplication).MGAE.getEvents(getString(R.string.layout_event),"Click on MoreApps","Click on Button")
         startActivity(Intent(this, MoreApps::class.java))}
 
     fun openPrivacyPolicy(){
-        (application as MainApplication).MGAE.getEvents(getString(R.string.layout_event),"PrivacyPolicy","Click on Button")
+        (application as MyMainApplication).MGAE.getEvents(getString(R.string.layout_event),"PrivacyPolicy","Click on Button")
         Tools().showPrivacyPolicy(this)}
 
     fun redirectToLiveWallpaper(){
         ManagerWaterEffects().setWaterEffects(this)}
 
     fun shareTheme(){
-        (application as MainApplication).MGAE.getEvents(getString(R.string.layout_event),"Share","Click on Button")
+        (application as MyMainApplication).MGAE.getEvents(getString(R.string.layout_event),"Share","Click on Button")
         mTools.shareTheme(this)}
 
     override fun onBackPressed() {

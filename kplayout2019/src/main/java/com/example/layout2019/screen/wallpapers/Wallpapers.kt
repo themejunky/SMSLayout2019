@@ -15,7 +15,7 @@ import com.bumptech.glide.request.target.SimpleTarget
 import com.example.layout2019.screen.wallpapers.utils.WallpapersAdapter
 import com.example.layout2019.screen.wallpapers.utils.setWallpapersAdapter
 import com.kplayout2019.R
-import com.theme.junky.themeskotlin.MainApplication
+import com.theme.junky.themeskotlin.MyMainApplication
 import com.theme.junky.themeskotlin.utils.ViewModelFactory
 import kotlinx.android.synthetic.main.no_internet.*
 import kotlinx.android.synthetic.main.wallpaper_activity.*
@@ -77,7 +77,7 @@ class Wallpapers : AppCompatActivity(), ListenerImage {
                         transition: com.bumptech.glide.request.transition.Transition<in Bitmap>?) {
                         myWallpaperManager.setBitmap(resource)
                         Toast.makeText(this@Wallpapers,"Wallpaper was set!",Toast.LENGTH_LONG).show()
-                        (application as MainApplication).MGAE.getEvents("asfdfasd","Wallpapers: Click on position: ${position} ${urlString}","Click on Button")
+                        (application as MyMainApplication).MGAE.getEvents("asfdfasd","Wallpapers: Click on position: ${position} ${urlString}","Click on Button")
                     }
 
                 })
@@ -87,7 +87,7 @@ class Wallpapers : AppCompatActivity(), ListenerImage {
     override fun whenClickOnImage(urlString: String,isClicked:Boolean,position:Int) {
         this.urlString = urlString
         this.position = position
-       // (application as MainApplication).MGAE.getEvents(getString(R.string.layout_event),"MoreApps: Click on position: ${position} ${urlString}","Click on Button")
+       // (application as MyMainApplication).MGAE.getEvents(getString(R.string.layout_event),"MoreApps: Click on position: ${position} ${urlString}","Click on Button")
 
         nButtonSelectWall.background = ContextCompat.getDrawable(this, R.drawable.select_button)
         mUrlString = urlString

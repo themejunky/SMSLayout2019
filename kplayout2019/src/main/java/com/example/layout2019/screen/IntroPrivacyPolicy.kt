@@ -9,7 +9,7 @@ import com.kplayout2019.R
 import com.example.layout2019.utils.Tools
 import com.google.firebase.FirebaseApp
 import com.google.firebase.messaging.FirebaseMessaging
-import com.theme.junky.themeskotlin.MainApplication
+import com.theme.junky.themeskotlin.MyMainApplication
 
 
 class IntroPrivacyPolicy : AppCompatActivity(), View.OnClickListener {
@@ -28,7 +28,7 @@ class IntroPrivacyPolicy : AppCompatActivity(), View.OnClickListener {
            Tools().redirectLayout(this)
            nrOfEntries =  prefs.getInt("nrOfEntries",0)
            nrOfEntries++
-           (application as MainApplication).MGAE.getEvents(getString(R.string.layout_event),"Number of Entries","Number of Entries: ${nrOfEntries}")
+           (application as MyMainApplication).MGAE.getEvents(getString(R.string.layout_event),"Number of Entries","Number of Entries: ${nrOfEntries}")
            prefs.edit().putInt("nrOfEntries", nrOfEntries).apply()
        }
     }
@@ -45,7 +45,7 @@ class IntroPrivacyPolicy : AppCompatActivity(), View.OnClickListener {
             R.id.nView5 -> {
                 Tools().redirectLayout(this)
                 nrOfEntries++
-                (application as MainApplication).MGAE.getEvents(getString(R.string.layout_event),"Number of Entries","Number of Entries: ${nrOfEntries}")
+                (application as MyMainApplication).MGAE.getEvents(getString(R.string.layout_event),"Number of Entries","Number of Entries: ${nrOfEntries}")
                 prefs.edit().putBoolean("first", true).apply()
                 prefs.edit().putInt("nrOfEntries", nrOfEntries).apply()
 
@@ -53,11 +53,11 @@ class IntroPrivacyPolicy : AppCompatActivity(), View.OnClickListener {
             }
             R.id.nView6 -> {
                 Tools().showPrivacyPolicy(this)
-                (application as MainApplication).MGAE.getEvents(getString(R.string.layout_event),"Click on Privacy Policy","Privacy Policy")
+                (application as MyMainApplication).MGAE.getEvents(getString(R.string.layout_event),"Click on Privacy Policy","Privacy Policy")
             }
             R.id.nView7 -> {
                 Tools().showPrivacyPolicy(this)
-                (application as MainApplication).MGAE.getEvents(getString(R.string.layout_event),"Click on Privacy Policy","Privacy Policy")
+                (application as MyMainApplication).MGAE.getEvents(getString(R.string.layout_event),"Click on Privacy Policy","Privacy Policy")
             }
         }
     }
