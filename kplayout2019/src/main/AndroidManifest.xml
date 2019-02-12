@@ -31,16 +31,15 @@
                 android:name="com.example.layout2019.receiver.SmsThemeReceiver"
                 android:exported="true">
             <intent-filter>
-                <action android:name="com.themejunky.keyboardplus.plugin.KEYBOARD_THEME"/>
+                <action android:name="com.smsplus.app.plugin.APP_THEME" />
 
-                <category android:name="android.intent.category.DEFAULT"/>
-                <category android:name="android.intent.category.ALTERNATIVE"/>
-                <category android:name="android.intent.category.SELECTED_ALTERNATIVE"/>
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.ALTERNATIVE" />
+                <category android:name="android.intent.category.SELECTED_ALTERNATIVE" />
             </intent-filter>
-
             <meta-data
-                    android:name="com.themejunky.keyboardplus.plugindata.keyboardtheme"
-                    android:resource="@xml/keyboard_themes"/>
+                    android:name="com.smsplus.app.plugindata.apptheme"
+                    android:resource="@xml/themes" />
         </receiver>
 
         <!--PushNotification-->
