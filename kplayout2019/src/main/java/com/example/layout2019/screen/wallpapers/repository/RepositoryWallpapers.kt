@@ -1,5 +1,6 @@
 package com.example.layout2019.screen.wallpapers.repository
 
+import android.util.Log
 import com.example.layout2019.model.ThemeItem
 import com.example.layout2019.retrofit.RetrofitService
 import com.example.layout2019.screen.wallpapers.WallpaperViewModel
@@ -24,6 +25,7 @@ class RepositoryWallpapers (val mViewModel: WallpaperViewModel){
     }
     private fun successeWallpaper(mResult: List<ThemeItem>){
 
+        Log.d("asfas","successeWallpaper")
         with (mViewModel){
             wallpapersList.clear()
             mViewModel.isInternet.value = true
@@ -39,6 +41,7 @@ class RepositoryWallpapers (val mViewModel: WallpaperViewModel){
 
     }
     private fun erroreWallpaper(mError: Throwable){
+        Log.d("asfas","erroreWallpaper: " + mError.message)
         if (mError is IOException) {
             mViewModel.isInternet.value = false
         }
