@@ -17,11 +17,9 @@ import android.widget.ImageView
 import android.widget.ScrollView
 import android.widget.TextView
 import com.example.layout2019.dialogs.NoMotherInstalled
-import com.example.layout2019.screen.RateScreenActivity
 import com.example.layout2019.screen.mainscreen.MainScreenLibrary
 import com.google.android.gms.ads.AdListener
 import com.kplayout2019.R
-import com.theme.junky.pushnotificationlib.ManagerPush
 import java.util.*
 
 open class Tools : AdListener() {
@@ -93,8 +91,8 @@ open class Tools : AdListener() {
             intent.putExtra("theme_name", activity.resources.getString(R.string.theme_name))
             intent.putExtra("packageName", activity.getPackageName())
             activity.startActivity(intent)
-            ManagerPush().setPushNotification(true,activity.resources.getString(R.string.text_push_notification_title),activity.resources.getString(R.string.text_push_notification_subtitle),R.mipmap.ic_launcher,
-                activity.resources.getInteger(R.integer.time_rate_notification1).toLong(), activity.resources.getInteger(R.integer.time_rate_notification2).toLong(),activity.resources.getInteger(R.integer.time_rate_notification3).toLong(),"testPush")
+            //ManagerPush().setPushNotification(true,activity.resources.getString(R.string.text_push_notification_title),activity.resources.getString(R.string.text_push_notification_subtitle),R.mipmap.ic_launcher,
+            //    activity.resources.getInteger(R.integer.time_rate_notification1).toLong(), activity.resources.getInteger(R.integer.time_rate_notification2).toLong(),activity.resources.getInteger(R.integer.time_rate_notification3).toLong(),"testPush")
         }
     }
 
@@ -112,8 +110,8 @@ open class Tools : AdListener() {
             intent.putExtra("theme_name", activity.resources.getString(R.string.theme_name))
             intent.putExtra("packageName", activity.getPackageName())
             activity.startActivity(intent)
-            ManagerPush().setPushNotification(true,activity.resources.getString(R.string.text_push_notification_title),activity.resources.getString(R.string.text_push_notification_subtitle),R.mipmap.ic_launcher,
-                activity.resources.getInteger(R.integer.time_rate_notification1).toLong(), activity.resources.getInteger(R.integer.time_rate_notification2).toLong(),activity.resources.getInteger(R.integer.time_rate_notification3).toLong(),"testPush")
+           // ManagerPush().setPushNotification(true,activity.resources.getString(R.string.text_push_notification_title),activity.resources.getString(R.string.text_push_notification_subtitle),R.mipmap.ic_launcher,
+            //    activity.resources.getInteger(R.integer.time_rate_notification1).toLong(), activity.resources.getInteger(R.integer.time_rate_notification2).toLong(),activity.resources.getInteger(R.integer.time_rate_notification3).toLong(),"testPush")
         }
     }
 
@@ -171,8 +169,8 @@ open class Tools : AdListener() {
             .setAction(R.string.rate_me) { activity.finish() }
         val sbView = snackbar.view
         val params = sbView.layoutParams as FrameLayout.LayoutParams
-        val textView = sbView.findViewById<TextView>(android.support.design.R.id.snackbar_text)
-        val textViewAction = sbView.findViewById<TextView>(android.support.design.R.id.snackbar_action)
+        val textView = sbView.findViewById<TextView>(R.id.snackbar_text)
+        val textViewAction = sbView.findViewById<TextView>(R.id.snackbar_action)
 
         params.gravity = Gravity.TOP
 
