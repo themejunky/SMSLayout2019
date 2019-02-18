@@ -8,6 +8,7 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import com.kplayout2019.R
 import com.example.layout2019.ads.ManagerNativeAdmob
+import com.example.layout2019.rateUsAlert.RateUsStars
 import com.example.layout2019.screen.dontleave.DontLeave
 import com.example.layout2019.screen.moreapps.MoreApps
 import com.example.layout2019.screen.wallpapers.Wallpapers
@@ -40,6 +41,7 @@ class MainScreenLibrary : AppCompatActivity() {
         supportActionBar?.hide()
         mTools.skakeImage(this,findViewById(R.id.nImageShake),2000,2000)
         ManagerNativeAdmob().init(this,ADMOB_AD_UNIT_ID,findViewById(R.id.nativeAdsContainer))
+        checkIfWeNeedToShowRateUs()
 
     }
 
@@ -85,6 +87,13 @@ class MainScreenLibrary : AppCompatActivity() {
             mTools.existApp(this,findViewById(R.id.scrollViewId))}
         }
 
-
+    private fun checkIfWeNeedToShowRateUs() {
+        val mIntent = intent
+        if (mIntent.hasExtra("rate_us_flag")) {
+            if (mIntent.getBooleanExtra("rate_us_flag", false)) {
+                RateUsStars.getInstance().showRate(this)
+            }
+        }
+    }
 
 }

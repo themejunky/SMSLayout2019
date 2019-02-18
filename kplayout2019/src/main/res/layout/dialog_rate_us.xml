@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#DF673AB7"
+        android:textColor="#fff"
+        android:gravity="center"
+        android:padding="10dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:text="Rate us many stars ^_^ "/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:text="If you enjoy using Kest Keyboard Plus, please give us all the stars on Google Play!"
+        android:padding="10dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:orientation="horizontal">
+
+        <RelativeLayout style="@style/RateUsStarContainer">
+            <ImageView android:id="@+id/mStar1" android:tag="1" style="@style/RateUsStar"/>
+        </RelativeLayout>
+
+        <RelativeLayout style="@style/RateUsStarContainer">
+            <ImageView android:id="@+id/mStar2" android:tag="2" style="@style/RateUsStar"/>
+        </RelativeLayout>
+
+        <RelativeLayout style="@style/RateUsStarContainer">
+            <ImageView android:id="@+id/mStar3" android:tag="3" style="@style/RateUsStar"/>
+        </RelativeLayout>
+
+        <RelativeLayout style="@style/RateUsStarContainer">
+            <ImageView android:id="@+id/mStar4" android:tag="4" style="@style/RateUsStar"/>
+        </RelativeLayout>
+
+        <RelativeLayout style="@style/RateUsStarContainer">
+            <ImageView android:id="@+id/mStar5" android:tag="5" style="@style/RateUsStar"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:id="@+id/mLate"
+            style="@style/RateUsStarButton"
+            android:text="LATER"/>
+
+        <TextView
+            android:id="@+id/mRate"
+            style="@style/RateUsStarButton"
+            android:text="RATE"/>
+
+    </LinearLayout>
+
+</LinearLayout>
