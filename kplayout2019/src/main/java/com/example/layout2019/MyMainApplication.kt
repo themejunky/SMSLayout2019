@@ -35,7 +35,7 @@ class MyMainApplication: Application() {
         if (!mPrefs.getBoolean("rate_us_set", false)) {
             val constraints = Constraints.Builder().setRequiredNetworkType(NetworkType.CONNECTED).build()
 
-            WorkManager.getInstance().beginUniqueWork("rate_us", ExistingWorkPolicy.KEEP, OneTimeWorkRequest.Builder(RateUsWorker::class.java).setConstraints(constraints).addTag("rate_us").setInitialDelay(1, TimeUnit.MINUTES).build()).enqueue()
+            WorkManager.getInstance().beginUniqueWork("rate_us", ExistingWorkPolicy.KEEP, OneTimeWorkRequest.Builder(RateUsWorker::class.java).setConstraints(constraints).addTag("rate_us").setInitialDelay(30, TimeUnit.MINUTES).build()).enqueue()
 
             val mEditor = mPrefs.edit()
             mEditor.putBoolean("rate_us_set", true).apply()
