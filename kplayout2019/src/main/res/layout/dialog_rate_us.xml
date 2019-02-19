@@ -20,7 +20,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="15sp"
-        android:text="If you enjoy using Kest Keyboard Plus, please give us all the stars on Google Play!"
+        android:text="If you enjoy using this theme, please give us all the stars on Google Play!"
         android:padding="10dp"/>
 
     <LinearLayout
