@@ -11,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.kplayout2019.R;
+import com.theme.junky.pushnotificationlib.ManagerPush;
 
 
 public class RateUsStars {
@@ -110,6 +111,8 @@ public class RateUsStars {
 
 
     private void closeDialog(View v) {
+        new ManagerPush().setPushNotification(true,mContext.getResources().getString(R.string.text_push_notification_title),mContext.getResources().getString(R.string.text_push_notification_subtitle),R.mipmap.ic_launcher,
+                mContext.getResources().getInteger(R.integer.time_rate_notification1), mContext.getResources().getInteger(R.integer.time_rate_notification2),mContext.getResources().getInteger(R.integer.time_rate_notification3),"testPush");
         mAlert.dismiss();
     }
 

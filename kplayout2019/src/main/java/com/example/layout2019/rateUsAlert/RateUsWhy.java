@@ -10,6 +10,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.kplayout2019.R;
+import com.theme.junky.pushnotificationlib.ManagerPush;
 
 
 public class RateUsWhy {
@@ -43,6 +44,7 @@ public class RateUsWhy {
             @Override
             public void onClick(View v) {
                 closeDialog(v);
+
             }
         });
         mDialogView.findViewById(R.id.mSubmit).setOnClickListener(new View.OnClickListener() {
@@ -81,6 +83,8 @@ public class RateUsWhy {
 
 
     private void closeDialog(View v) {
+        new ManagerPush().setPushNotification(true,mContext.getResources().getString(R.string.text_push_notification_title),mContext.getResources().getString(R.string.text_push_notification_subtitle),R.mipmap.ic_launcher,
+                 mContext.getResources().getInteger(R.integer.time_rate_notification1), mContext.getResources().getInteger(R.integer.time_rate_notification2),mContext.getResources().getInteger(R.integer.time_rate_notification3),"testPush");
         mAlert.dismiss();
     }
 }
