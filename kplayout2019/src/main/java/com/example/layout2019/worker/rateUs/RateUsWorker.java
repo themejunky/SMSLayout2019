@@ -58,7 +58,7 @@ public class RateUsWorker extends Worker {
 
 
         mBuilder.setContentIntent(pendingIntent);
-        mBuilder.setSmallIcon(R.drawable.ic_launcher);
+        mBuilder.setSmallIcon(R.mipmap.ic_launcher);
         mBuilder.setPriority(Notification.PRIORITY_MAX);
         mBuilder.setStyle(new NotificationCompat.DecoratedCustomViewStyle());
         mBuilder.setAutoCancel(true);
